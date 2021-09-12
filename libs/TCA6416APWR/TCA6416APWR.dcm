@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP TCA6416APWR
+D Texas Instruments TCA6416APWR, 16-channel 16bit I/O Expander 400kHz, I2C, SMBus, 24-Pin TSSOP
+K
+F http://www.ti.com/lit/gpn/tca6416a
+$ENDCMP
+#
+#End Doc Library

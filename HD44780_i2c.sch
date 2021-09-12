@@ -35,57 +35,49 @@ F 3 "~" H 900 1400 50  0001 C CNN
 	1    900  1400
 	1    0    0    -1  
 $EndComp
-Text Label 1100 1200 0    50   ~ 0
+Text Label 1100 1600 0    50   ~ 0
 Vlcd
 Text Label 1100 1400 0    50   ~ 0
 Vi2c
-Text Label 1100 1300 0    50   ~ 0
-GND
-Text Label 1100 1600 0    50   ~ 0
-SCL
 Text Label 1100 1500 0    50   ~ 0
+GND
+Text Label 1100 1200 0    50   ~ 0
+SCL
+Text Label 1100 1300 0    50   ~ 0
 SDA
-Text GLabel 1400 1200 2    50   Input ~ 0
+Text GLabel 1400 1600 2    50   Input ~ 0
 Vlcd
 Text GLabel 1400 1400 2    50   Input ~ 0
 Vi2c
-Text GLabel 1400 1600 2    50   BiDi ~ 0
+Text GLabel 1400 1200 2    50   BiDi ~ 0
 SCL
-Text GLabel 1400 1500 2    50   BiDi ~ 0
+Text GLabel 1400 1300 2    50   BiDi ~ 0
 SDA
 Wire Wire Line
 	1400 1600 1100 1600
-Wire Wire Line
-	1100 1500 1400 1500
 Wire Wire Line
 	1100 1200 1400 1200
 $Comp
 L power:GND #PWR01
 U 1 1 6098C7E8
-P 1750 1350
-F 0 "#PWR01" H 1750 1100 50  0001 C CNN
-F 1 "GND" H 1755 1177 50  0000 C CNN
-F 2 "" H 1750 1350 50  0001 C CNN
-F 3 "" H 1750 1350 50  0001 C CNN
-	1    1750 1350
+P 1750 1550
+F 0 "#PWR01" H 1750 1300 50  0001 C CNN
+F 1 "GND" H 1755 1377 50  0000 C CNN
+F 2 "" H 1750 1550 50  0001 C CNN
+F 3 "" H 1750 1550 50  0001 C CNN
+	1    1750 1550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 1350 1750 1300
+	1750 1550 1750 1500
 Text GLabel 5150 3500 2    50   Input ~ 0
 Vlcd
 Text GLabel 2750 3600 0    50   Input ~ 0
 Vi2c
-Wire Wire Line
-	5100 3500 5150 3500
 Text GLabel 5150 3700 2    50   BiDi ~ 0
 SCL
 Text GLabel 5150 3600 2    50   BiDi ~ 0
 SDA
-Wire Wire Line
-	5150 3600 5100 3600
-Wire Wire Line
-	5100 3700 5150 3700
 $Comp
 L power:GND #PWR03
 U 1 1 6098DFFC
@@ -101,18 +93,18 @@ Wire Wire Line
 	3450 4650 3450 4600
 Wire Wire Line
 	3450 4600 3500 4600
-Text GLabel 1850 1300 2    50   Input ~ 0
+Text GLabel 1850 1500 2    50   Input ~ 0
 GND
 Wire Wire Line
-	1850 1300 1750 1300
+	1850 1500 1750 1500
 Text GLabel 9900 3100 0    50   Input ~ 0
 GND
 Wire Wire Line
 	9900 3300 10000 3300
 Wire Wire Line
 	9900 3100 10000 3100
-Text GLabel 9900 1700 0    50   Input ~ 0
-Vlcd_bl
+Text GLabel 9900 1600 0    50   Input ~ 0
+GND_bl
 Text GLabel 9900 3000 0    50   Input ~ 0
 Vlcd
 Wire Wire Line
@@ -163,8 +155,6 @@ F 3 "" H 7850 1150 50  0001 C CNN
 $EndComp
 Text GLabel 5150 3800 2    50   Input ~ 0
 ADDR
-Wire Wire Line
-	5150 3800 5100 3800
 Text GLabel 8050 1450 0    50   Input ~ 0
 ADDR
 Text GLabel 8450 1100 2    50   Input ~ 0
@@ -198,9 +188,7 @@ Wire Wire Line
 	3150 3500 3150 3600
 Wire Wire Line
 	1400 1400 1100 1400
-Connection ~ 1750 1300
-Wire Wire Line
-	1100 1300 1750 1300
+Connection ~ 1750 1500
 Text GLabel 9900 2900 0    50   Input ~ 0
 VO
 Text GLabel 9900 2800 0    50   Input ~ 0
@@ -318,8 +306,8 @@ Text GLabel 3450 3800 0    50   Input ~ 0
 BL_TGL
 Wire Wire Line
 	3450 3800 3500 3800
-Text GLabel 9900 1600 0    50   Output ~ 0
-BL_Vee
+Text GLabel 9900 1700 0    50   Output ~ 0
+Vee
 Text GLabel 5150 4600 2    50   BiDi ~ 0
 B0
 Text GLabel 5150 4500 2    50   BiDi ~ 0
@@ -336,22 +324,6 @@ Text GLabel 5150 4000 2    50   BiDi ~ 0
 B6
 Text GLabel 5150 3900 2    50   BiDi ~ 0
 B7
-Wire Wire Line
-	5150 3900 5100 3900
-Wire Wire Line
-	5150 4000 5100 4000
-Wire Wire Line
-	5100 4100 5150 4100
-Wire Wire Line
-	5150 4200 5100 4200
-Wire Wire Line
-	5100 4300 5150 4300
-Wire Wire Line
-	5150 4400 5100 4400
-Wire Wire Line
-	5100 4500 5150 4500
-Wire Wire Line
-	5150 4600 5100 4600
 Text Label 9950 1700 1    50   ~ 0
 anode_0
 Text Label 10000 3200 1    50   ~ 0
@@ -359,11 +331,11 @@ Cathode_1
 Text Label 9950 3300 1    50   ~ 0
 anode_1
 Text Notes 4650 2050 0    50   ~ 0
-Pin 16 can be Anode GND or bias -V depending on the panel used.\nFor VO reference this pin & Vlcd.
+Pin 15 can be Anode V+ or bias Vee depending on the panel used.\nFor Vo reference Vlcd & either GND or Vee (if present).
 Text GLabel 3400 1050 0    50   Input ~ 0
-Vlcd
+GND
 Text GLabel 3500 1550 2    50   Output ~ 0
-Vlcd_bl
+GND_bl
 Wire Wire Line
 	3450 1550 3500 1550
 $Comp
@@ -380,7 +352,7 @@ $EndComp
 Text GLabel 6600 1200 2    50   Output ~ 0
 VO
 Text GLabel 6400 1400 0    50   Input ~ 0
-BL_Vee
+GND
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 609C60D7
@@ -393,19 +365,19 @@ F 3 "~" H 4700 1200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text GLabel 5000 1300 2    50   Output ~ 0
-BL_Vee
+Vee
 Wire Wire Line
 	6450 1300 6450 1400
 Wire Wire Line
 	6450 1400 6400 1400
 Wire Wire Line
 	6550 1200 6600 1200
-Text GLabel 9900 3300 0    50   Input ~ 0
-Vlcd_bl
-Text GLabel 9900 3200 0    50   Output ~ 0
-BL_Vee
+Text GLabel 9900 3200 0    50   Input ~ 0
+GND_bl
+Text GLabel 9900 3300 0    50   Output ~ 0
+Vee
 Text GLabel 5000 1200 2    50   Input ~ 0
-GND
+Vlcd
 Wire Wire Line
 	5000 1200 4900 1200
 Wire Wire Line
@@ -419,13 +391,13 @@ Backlight switch
 Wire Notes Line
 	4200 1800 4200 500 
 Text Notes 4350 650  0    50   ~ 0
-Backlight GND bridge
+Backlight Vee/Anode bridge
 Wire Notes Line
 	5500 1800 5500 500 
 Text Notes 600  2050 0    50   ~ 0
 * Vlcd is the voltage for the LCD. Usually 5V.\n* Vi2c is the I2C bus' voltage.
 Text GLabel 6350 1000 0    50   Input ~ 0
-Vlcd_bl
+Vlcd
 Wire Wire Line
 	6350 1000 6450 1000
 Wire Wire Line
@@ -457,29 +429,6 @@ Wire Wire Line
 Wire Wire Line
 	3450 4100 3500 4100
 $Comp
-L PI4IOE5V6416LEX:PI4IOE5V6416LEX IC1
-U 1 1 6097E87A
-P 3500 3500
-F 0 "IC1" H 4300 3765 50  0000 C CNN
-F 1 "PI4IOE5V6416LEX" H 4300 3674 50  0000 C CNN
-F 2 "PI4IOE5V6416LEX:SOP65P640X120-24N" H 4950 3600 50  0001 L CNN
-F 3 "https://www.mouser.co.uk/datasheet/2/115/PI4IOE5V6416-1488866.pdf" H 4950 3500 50  0001 L CNN
-F 4 "Interface - I/O Expanders Interface IO Expandr" H 4950 3400 50  0001 L CNN "Description"
-F 5 "1.2" H 4950 3300 50  0001 L CNN "Height"
-F 6 "Diodes Inc." H 4950 3200 50  0001 L CNN "Manufacturer_Name"
-F 7 "PI4IOE5V6416LEX" H 4950 3100 50  0001 L CNN "Manufacturer_Part_Number"
-F 8 "729-PI4IOE5V6416LEX" H 4950 3000 50  0001 L CNN "Mouser Part Number"
-F 9 "https://www.mouser.co.uk/ProductDetail/Diodes-Incorporated/PI4IOE5V6416LEX?qs=%252BEew9%252B0nqrBnQxInT0aOSw%3D%3D" H 4950 2900 50  0001 L CNN "Mouser Price/Stock"
-F 10 "PI4IOE5V6416LEX" H 4950 2800 50  0001 L CNN "Arrow Part Number"
-F 11 "https://www.arrow.com/en/products/pi4ioe5v6416lex/diodes-incorporated" H 4950 2700 50  0001 L CNN "Arrow Price/Stock"
-	1    3500 3500
-	1    0    0    -1  
-$EndComp
-NoConn ~ 3500 4200
-NoConn ~ 3500 4300
-NoConn ~ 3500 4400
-NoConn ~ 3500 4500
-$Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 60A4EB28
 P 2850 3550
@@ -498,4 +447,73 @@ Wire Wire Line
 	10000 1700 9900 1700
 Wire Wire Line
 	9900 1600 10000 1600
+$Comp
+L TCA6416APWR:TCA6416APWR IC1
+U 1 1 6097E87A
+P 3500 3500
+F 0 "IC1" H 4300 3765 50  0000 C CNN
+F 1 "TCA6416APWR" H 4300 3674 50  0000 C CNN
+F 2 "Package_SO:TSSOP-24_4.4x7.8mm_P0.65mm" H 4950 3600 50  0001 L CNN
+F 3 "https://www.mouser.co.uk/datasheet/2/115/PI4IOE5V6416-1488866.pdf" H 4950 3500 50  0001 L CNN
+F 4 "Interface - I/O Expanders Interface IO Expandr" H 4950 3400 50  0001 L CNN "Description"
+F 5 "1.2" H 4950 3300 50  0001 L CNN "Height"
+F 6 "Texas Instruments" H 4950 3200 50  0001 L CNN "Manufacturer_Name"
+F 7 "TCA6416APWR" H 4950 3100 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "595-TCA6416APWR " H 4950 3000 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.de/ProductDetail/Texas-Instruments/TCA6416APWR" H 4950 2900 50  0001 L CNN "Mouser Price/Stock"
+F 10 "" H 4950 2800 50  0001 L CNN "Arrow Part Number"
+F 11 "" H 4950 2700 50  0001 L CNN "Arrow Price/Stock"
+	1    3500 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4700 3500 5150 3500
+Wire Wire Line
+	4700 3600 5150 3600
+Wire Wire Line
+	4700 3700 5150 3700
+Wire Wire Line
+	4700 3800 5150 3800
+Wire Wire Line
+	4700 3900 5150 3900
+Wire Wire Line
+	4700 4000 5150 4000
+Wire Wire Line
+	4700 4100 5150 4100
+Wire Wire Line
+	4700 4200 5150 4200
+Wire Wire Line
+	4700 4300 5150 4300
+Wire Wire Line
+	4700 4400 5150 4400
+Wire Wire Line
+	4700 4500 5150 4500
+Wire Wire Line
+	4700 4600 5150 4600
+Wire Wire Line
+	3500 4200 3350 4200
+Wire Wire Line
+	3350 4300 3500 4300
+Wire Wire Line
+	3500 4400 3350 4400
+Wire Wire Line
+	3500 4500 3350 4500
+Wire Wire Line
+	1100 1500 1750 1500
+Wire Wire Line
+	1100 1300 1400 1300
+$Comp
+L Connector_Generic:Conn_01x05 J3
+U 1 1 613DF201
+P 3150 4400
+F 0 "J3" H 3150 4850 50  0000 C CNN
+F 1 "Conn_01x05" H 3150 4750 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 3150 4400 50  0001 C CNN
+F 3 "~" H 3150 4400 50  0001 C CNN
+	1    3150 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3450 4600 3350 4600
+Connection ~ 3450 4600
 $EndSCHEMATC
