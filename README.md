@@ -2,7 +2,7 @@
 
 ![](HD44780_i2c.jpg)
 
-This project is a basic I2C expander module that allows for interfacing with a variety of 14 to 16-pin, HD44780-compatible displays:
+This project is an I2C expander module based around a Texas Instruments TCA6416A I2C GPIO expander. It allows for interfacing with a variety of 14 to 16-pin, HD44780-compatible displays:
 
 - 14-pin without backlight.
 - 16-pin with A/K backlight pins after pin 14.
@@ -14,9 +14,25 @@ This adapter is compatible with both 3.3V and 5V I2C bus levels. The 5-pin MCU/M
 1. **Vlcd:** LCD-side voltage. This is 5V for a 5V display.
 2. **GND:** Ground connection.
 3. **Vi2c:** I2C bus voltage. This is 3.3V for a 3.3V MCU.
-4. **SDA:** I2C data line.
-5. **SCL:** I2C clock line.
+4. **SDA:** I2C data line. At MCU level voltage.
+5. **SCL:** I2C clock line. At MCU level voltage.
+
+## GPIO header ##
+
+Four GPIO pins from the I2C expander are broken out into a 5-pin header (J3). These can be freely used, limited by the TCA6416A's capabilities.
+
+## Vlcd-Vee backlight ##
+
+When a display is connected that does not use pin 16 for Vee (negative bias), but instead expects a 5V backlight supply voltage on this, connect the `Vlcd-Vee` connector with a jumper.
+
+## Backlight enable ##
+
+The backlight on/off state is controlled by GPIO 0 of the TCA6416A via Q1.
+
+## Contrast adjustment ##
+
+For contrast adjustment, a potentiometer on the board is provided.
 
 ## TODO ##
 
-This is currently a draft design. It likely will not work (reliably) yet.
+This is currently a prototype design. It is likely to not work (reliably) yet.
