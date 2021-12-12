@@ -17,6 +17,10 @@ This adapter is compatible with both 3.3V and 5V I2C bus levels. The 5-pin MCU/M
 4. **SDA:** I2C data line. At MCU level voltage.
 5. **SCL:** I2C clock line. At MCU level voltage.
 
+## I2C address ##
+
+Default I2C 7-bit address is 0x20, set with JP1 (1-2 connected). To use the alternate 0x21 address, cut the connection on JP1 between pads 1 & 2, and connect 2-3.
+
 ## GPIO header ##
 
 Four GPIO pins from the I2C expander are broken out into a 5-pin header (J3). These can be freely used, limited by the TCA6416A's capabilities.
@@ -35,4 +39,4 @@ For contrast adjustment, a potentiometer on the board is provided.
 
 ## TODO ##
 
-This is currently a prototype design. It is likely to not work (reliably) yet.
+This is currently a prototype design. It's likely that some things may not fully work as intended yet.

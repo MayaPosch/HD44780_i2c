@@ -330,8 +330,8 @@ Text Label 10000 3200 1    50   ~ 0
 Cathode_1
 Text Label 9950 3300 1    50   ~ 0
 anode_1
-Text Notes 4650 2050 0    50   ~ 0
-Pin 15 can be Anode V+ or bias Vee depending on the panel used.\nFor Vo reference Vlcd & either GND or Vee (if present).
+Text Notes 4250 2200 0    50   ~ 0
+Pin 15 can be Anode V+ or bias Vee depending on the panel used.\nConnect Vlcd to Vee using the BL Vee/Vlcd header.\n\nFor Vo reference Vlcd & either GND or Vee (if present).
 Text GLabel 3400 1050 0    50   Input ~ 0
 GND
 Text GLabel 3500 1550 2    50   Output ~ 0
