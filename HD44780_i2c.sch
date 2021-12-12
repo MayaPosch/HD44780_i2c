@@ -344,7 +344,7 @@ U 1 1 609C42C0
 P 6450 1200
 F 0 "RV1" H 6391 1246 50  0000 R CNN
 F 1 "R_POT_Small" H 6391 1155 50  0000 R CNN
-F 2 "Potentiometer_SMD:Potentiometer_Bourns_3314G_Vertical" H 6450 1200 50  0001 C CNN
+F 2 "Potentiometer_SMD:Potentiometer_Bourns_TC33X_Vertical" H 6450 1200 50  0001 C CNN
 F 3 "~" H 6450 1200 50  0001 C CNN
 	1    6450 1200
 	1    0    0    -1  
