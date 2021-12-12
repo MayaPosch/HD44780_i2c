@@ -38,7 +38,7 @@ $EndComp
 Text Label 1100 1600 0    50   ~ 0
 Vlcd
 Text Label 1100 1400 0    50   ~ 0
-Vi2c
+VDD
 Text Label 1100 1500 0    50   ~ 0
 GND
 Text Label 1100 1200 0    50   ~ 0
@@ -48,7 +48,7 @@ SDA
 Text GLabel 1400 1600 2    50   Input ~ 0
 Vlcd
 Text GLabel 1400 1400 2    50   Input ~ 0
-Vi2c
+VDD
 Text GLabel 1400 1200 2    50   BiDi ~ 0
 SCL
 Text GLabel 1400 1300 2    50   BiDi ~ 0
@@ -73,7 +73,7 @@ Wire Wire Line
 Text GLabel 5150 3500 2    50   Input ~ 0
 Vlcd
 Text GLabel 2750 3600 0    50   Input ~ 0
-Vi2c
+VDD
 Text GLabel 5150 3700 2    50   BiDi ~ 0
 SCL
 Text GLabel 5150 3600 2    50   BiDi ~ 0
@@ -158,7 +158,7 @@ ADDR
 Text GLabel 8050 1450 0    50   Input ~ 0
 ADDR
 Text GLabel 8450 1100 2    50   Input ~ 0
-Vi2c
+VDD
 Wire Wire Line
 	7850 1100 7950 1100
 Wire Wire Line
@@ -395,7 +395,7 @@ Backlight Vee/Anode bridge
 Wire Notes Line
 	5500 1800 5500 500 
 Text Notes 600  2050 0    50   ~ 0
-* Vlcd is the voltage for the LCD. Usually 5V.\n* Vi2c is the I2C bus' voltage.
+* Vlcd is the voltage for the LCD. Usually 5V.\n* VDD is the I2C bus' voltage.
 Text GLabel 6350 1000 0    50   Input ~ 0
 Vlcd
 Wire Wire Line

@@ -13,7 +13,7 @@ This adapter is compatible with both 3.3V and 5V I2C bus levels. The 5-pin MCU/M
 
 1. **Vlcd:** LCD-side voltage. This is 5V for a 5V display.
 2. **GND:** Ground connection.
-3. **Vi2c:** I2C bus voltage. This is 3.3V for a 3.3V MCU.
+3. **VDD:** I2C bus voltage. This is 3.3V for a 3.3V MCU.
 4. **SDA:** I2C data line. At MCU level voltage.
 5. **SCL:** I2C clock line. At MCU level voltage.
 
