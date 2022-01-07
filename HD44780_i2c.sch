@@ -104,7 +104,7 @@ Wire Wire Line
 Wire Wire Line
 	9900 3100 10000 3100
 Text GLabel 9900 1600 0    50   Input ~ 0
-GND_bl
+BLK
 Text GLabel 9900 3000 0    50   Input ~ 0
 Vlcd
 Wire Wire Line
@@ -330,12 +330,12 @@ Text Label 10000 3200 1    50   ~ 0
 Cathode_1
 Text Label 9950 3300 1    50   ~ 0
 anode_1
-Text Notes 4250 2200 0    50   ~ 0
-Pin 15 can be Anode V+ or bias Vee depending on the panel used.\nConnect Vlcd to Vee using the BL Vee/Vlcd header.\n\nFor Vo reference Vlcd & either GND or Vee (if present).
+Text Notes 4250 2400 0    50   ~ 0
+LCD pin 15 (Vee) can be Anode V+ or bias Vee depending on the panel used.\nConnect Vlcd to Vee using the BL Vee/Vlcd header when pin 15 is anode.\n\nLCD pin 16 (BLK) is the LCD cathode.\n\nFor Vo reference Vlcd & either GND or Vee (if present).
 Text GLabel 3400 1050 0    50   Input ~ 0
 GND
 Text GLabel 3500 1550 2    50   Output ~ 0
-GND_bl
+BLK
 Wire Wire Line
 	3450 1550 3500 1550
 $Comp
@@ -373,7 +373,7 @@ Wire Wire Line
 Wire Wire Line
 	6550 1200 6600 1200
 Text GLabel 9900 3200 0    50   Input ~ 0
-GND_bl
+BLK
 Text GLabel 9900 3300 0    50   Output ~ 0
 Vee
 Text GLabel 5000 1200 2    50   Input ~ 0
